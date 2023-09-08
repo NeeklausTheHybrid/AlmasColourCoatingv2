@@ -2,6 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 
+
 const app = express();
 
 // Middleware
@@ -41,10 +42,10 @@ mongooseConnectDB( );
 // Define a route for the homepage
 app.get('/', (req, res) => {
     const selectedImageNames = ['resources/img2.jpg', 'resources/img3.jpg', 'resources/img4.jpg']; // Adjust with your selected image filenames
-    res.render('index', { selectedImageNames, numImages: selectedImageNames.length }); // Pass the numImages variable to the template
+    res.render('index', { selectedImageNames, numImages: selectedImageNames.length, cssName:"index" }); // Pass the numImages variable to the template
 });
 // Define a dynamic route based on the name parameter
 app.get("/:name", (req, res) => {
     const templateName = req.params.name;
-    res.render(templateName);
+    res.render(templateName, {cssName:templateName});
 });

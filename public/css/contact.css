@@ -1,0 +1,18 @@
+.contact-container {
+    padding: 1.5rem 3rem;
+
+}
+
+.contact-block {
+    background-color: aliceblue;
+    padding: 1rem 5rem;
+    border: 1px solid grey;
+    box-shadow: 1px 1px 1px solid black;
+    margin: 1rem 0;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem;
+
+}

@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Almas Colour Coating</title>
-    <link rel="shortcut icon" href="resources/footerlogo1.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/27c4e72872.js" crossorigin="anonymous"></script>
-</head>
+<%- include('./partials/header') %>
 
 <body>
     <!-- Navbar -->
@@ -118,70 +108,4 @@
             necessitatibus rem.
         </p>
     </div>
-
-    <!-- footer  -->
-    <footer>
-        <div class="footerPart1">
-            <div class="column-logo">
-                <img src="resources/footerlogo1.png" class="logoimg" alt="logo of site">
-            </div>
-
-            <div class="column-social">
-                <h4>Our Social</h4>
-                <ul class="footer-links">
-                    <li><a href="https://www.instagram.com/aman_pri777/?hl=en"><i
-                                class="fa-brands fa-instagram fa-lg"></i>
-                            Instagram</a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter fa-lg"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> Linkedin</a></li>
-                </ul>
-            </div>
-            <div class="column-about">
-                <h4>Info</h4>
-                <ul class="footer-links">
-                    <li><a href="/about">About us</a></li>
-                    <li><a href="/contact"> Contact Us &nbsp;<i class="fa-regular fa-comments"
-                                style="color: #ffffff;"></i></a></li>
-                    <li><a href="/">Privacy Policy</a></li>
-                    <li><a href="/">Terms & Condition</a></li>
-                </ul>
-            </div>
-
-            <div class="column-info">
-
-                <img src="/resources/footerlogo.png" alt="" class="footer-img">
-
-                <div class="contento">
-                    <p>
-                        Specialist In: Mechanical, Blast Cleaning, Metalizing & Painting Works.
-                    </p>
-
-                </div>
-
-            </div>
-        </div>
-        <div class="footerPart2">
-            <div class="copyright">
-                <p>&copy; Almas Colour Coating 2023. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navList = document.getElementById('nav-list');
-        const connectList = document.querySelector('.connect-list');
-
-        mobileToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-            connectList.classList.toggle('active'); // Toggle connect list visibility
-        });
-
-
-    </script>
-
-    <script src="js/script.js"></script>
-</body>
-
-</html>
+<%- include('./partials/footer') %>
