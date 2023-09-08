@@ -1,0 +1,49 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the project container */
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the top 5 projects */
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.project img {
+    max-width: 100%;
+    height: 450px
+}
+
+/* Style the project list */
+.project-list {
+    list-style-type: none;
+}
+
+.project-list li {
+    margin-bottom: 10px;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.download a{
+    color: rgb(56, 130, 221);
+}
+
+/* Add more styles as needed for your design */

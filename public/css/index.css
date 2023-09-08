@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font: 1em sans-serif;
+    box-sizing: border-box;
 }
 
 a {
@@ -25,8 +26,8 @@ a {
 }
 
 .logo img {
-    max-height: 70px;
-    width: 70px;
+    max-height: 75px;
+    width: 75px;
 }
 
 .nav-list,
@@ -49,7 +50,7 @@ a {
 .connect-list a {
     text-decoration: none;
     color: black;
-    font-size: medium;
+    font-size: 17px;
 
 }
 
@@ -109,46 +110,81 @@ a {
     padding: 20px;
 }
 
+/* styles.css */
+
+/* styles.css */
 
 .carousel-container {
-    position: relative;
+    width: 100%;
     overflow: hidden;
+    position: relative;
+    /* border: 5px solid black; */
 }
 
-.carousel-slide {
+.carousel-slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-image {
+.carousel-slide {
     min-width: 100%;
-}
-
-.carousel-image img {
-    width: 100%;
-    height: 550px;
-    object-fit: cover;
-    /* Maintain aspect ratio and cover entire container */
-}
-
-.slide-indicators {
+    flex: 1;
+    overflow: hidden;
+    text-align: center;
+    /* Center the image horizontally */
     display: flex;
     justify-content: center;
+    /* Center the image vertically */
+    align-items: center;
+    /* Center the image vertically */
+}
+
+.carousel-slide img {
+    max-width: 50%;
+    /* Make images fit inside the slide */
+    max-height: 100%;
+    /* Make images fit inside the slide */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.carousel-dots {
+    text-align: center;
     margin-top: 10px;
 }
 
-.indicator {
+.carousel-dot {
+    display: inline-block;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
     margin: 0 5px;
-    background-color: grey;
+    background-color: #999;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-
-
-
-.systum {
+.active-dot {
+    background-color: #fff;
+}.systum {
     width: 100%;
     height: 520px;
 }
@@ -220,7 +256,7 @@ footer {
 }
 
 .footer-links li a {
-    font-size: small;
+    font-size: 15px;
 
 
 }
@@ -234,10 +270,10 @@ footer {
 .column-info {
     display: flex;
     align-items: center;
-    width: 410px;
+    width: 430px;
 }
 .contento{
-    font-size: small;
+    font-size: 15px;
 }
 
 .footer-img {
@@ -254,7 +290,7 @@ footer {
 }
 
 .footerPart2 p {
-    font-size: 0.7rem;
+    font-size: 12px;
     padding: 0;
 }
 

@@ -1,0 +1,46 @@
+/* Reset some default styles */
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define a background color and font styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+/* Style the About section */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.about-content h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+
+
+.about-image {
+    flex: 1;
+    background: url('../resources/owner.jpg') no-repeat center;
+    background-size: cover;
+}

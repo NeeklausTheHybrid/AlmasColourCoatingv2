@@ -37,15 +37,19 @@ const mongooseConnectDB = async () => {
 
 
 // Connect to MongoDB or calling function
-mongooseConnectDB( );
+mongooseConnectDB();
 
 // Define a route for the homepage
 app.get('/', (req, res) => {
-    const selectedImageNames = ['resources/img2.jpg', 'resources/img3.jpg', 'resources/img4.jpg']; // Adjust with your selected image filenames
-    res.render('index', { selectedImageNames, numImages: selectedImageNames.length, cssName:"index" }); // Pass the numImages variable to the template
+    const images = ['resources/img2.jpg', 'resources/img3.jpg', 'resources/img4.jpg'];
+    res.render('index', { images, cssName: "index" });
 });
+app.get("/downloadList", (req, res)=>{
+    res.download("public/resources/List_of_projects.pdf");
+})
 // Define a dynamic route based on the name parameter
 app.get("/:name", (req, res) => {
     const templateName = req.params.name;
-    res.render(templateName, {cssName:templateName});
+    res.render(templateName, { cssName: templateName });
 });
+

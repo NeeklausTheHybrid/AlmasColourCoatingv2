@@ -1,58 +1,63 @@
 <%- include('./partials/header') %>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="resources/logo.png" alt="Company Logo">
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="resources/logo.png" alt="Company Logo">
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Our Services</a></li>
+                <li class="active"><a href="/projects">Our Projects</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+            <ul class="connect-list">
+                <li><a href="/contact"><i class="fa-solid fa-headset fa-xl" style="color: #787878;"></i> &nbsp;Connect
+                        with
+                        us </a></li>
+            </ul>
+        </nav>
+
+
+        <main class="project-container">
+            <h1>Our Top 5 Projects</h1>
+        
+            <!-- Project 1 -->
+            <div class="project">
+                <img src="resources/img1.jpg" alt="Project 1">
+                <h2>Project Title 1</h2>
+                <p>Project description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        <div class="project">
+            <img src="resources/img1.jpg" alt="Project 2">
+            <h2>Project Title 2</h2>
+            <p>Project description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div><div class="project">
+            <img src="resources/img1.jpg" alt="Project 3">
+            <h2>Project Title 3</h2>
+            <p>Project description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div><div class="project">
+            <img src="resources/img1.jpg" alt="Project 4">
+            <h2>Project Title 4</h2>
+            <p>Project description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-        <button class="mobile-toggle" id="mobile-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </button>
-        <ul class="nav-list" id="nav-list">
-            <li ><a href="/">Home</a></li>
-            <li ><a href="/services">Our Services</a></li>
-            <li class="active"><a href="/projects">Our Projects</a></li>
-            <li><a href="/about">About Us</a></li>
-        </ul>
-        <ul class="connect-list">
-            <li><a href="/contact"><i class="fa-solid fa-headset fa-xl" style="color: #787878;"></i> &nbsp;Connect with
-                    us </a></li>
-        </ul>
-    </nav>
+            <!-- Repeat the above structure for Projects 2 to 5 -->
+        
+            <h2>Other Projects</h2>
+        
+            <ul class="project-list">
+                <li><a href="#">Project Title 6</a></li>
+                <li><a href="#">Project Title 7</a></li>
+                <li><a href="#">Project Title 8</a></li>
+                <li class="download"><i class="fa-solid fa-download" style="color: #3882dd;"></i><a href="/downloadList">Click here to download list of our works</a></li>
+                <!-- Add more project links as needed -->
+            </ul>
+        </main>
 
-    <!-- image carousel -->
-    <!-- ... -->
-    
-
-    <!-- ... -->
-
-    <!-- section 2 -->
-
-    <div class="customers">
-        <h2>Previous works</h2>
-        <div class="block-container">
-            <div class="blocks">
-                <img src="resources/anya.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio eius tempora,
-                    obcaecati, cumque atque eveniet quidem et optio nesciunt beatae exercitationem quia temporibus cum
-                    dignissimos officiis iste porro neque.</p>
-            </div>
-            <div class="blocks">
-                <img src="resources/anya.png" alt="">
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in optio pariatur quasi dolore ea
-                    quisquam aspernatur libero dolorem rerum, quam ad enim minima sit cum et maxime fuga rem!</p>
-            </div>
-            <div class="blocks">
-                <img src="resources/anya.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo veniam animi itaque!
-                    Distinctio, officia blanditiis molestiae nostrum natus similique quisquam vero molestias,
-                    accusantium quia sed beatae, nemo rerum possimus?</p>
-            </div>
-
-
-        </div>
-    </div>
-<%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>

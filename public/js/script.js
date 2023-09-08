@@ -1,53 +1,48 @@
-const carouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-image');
-const indicators = document.querySelectorAll('.indicator');
+// script.js
 
-let counter = 0; // Start from the first image
-const numImages = images.length;
-const slideWidth = images[0].clientWidth;
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const slider = document.querySelector('.carousel-slider');
+const slides = document.querySelectorAll('.carousel-slide');
+const dotsContainer = document.querySelector('.carousel-dots');
 
-carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
+let slideIndex = 0;
 
-function updateIndicators() {
-    indicators.forEach((indicator, idx) => {
-        indicator.style.backgroundColor = idx === counter ? 'white' : 'grey';
+function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+    updateDots(index);
+}
+
+function updateDots(index) {
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('carousel-dot');
+        dot.classList.toggle('active-dot', i === index);
+        dot.addEventListener('click', () => showSlide(i));
+        dotsContainer.appendChild(dot);
     });
 }
 
-updateIndicators(); // Set initial dot color to white
+prevBtn.addEventListener('click', () => {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlide(slideIndex);
+});
 
-function slide() {
-    carouselSlide.style.transition = 'transform 0.5s ease-in-out';
-    counter++;
-    carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
+nextBtn.addEventListener('click', () => {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+});
 
-    if (counter >= numImages) {
-        setTimeout(() => {
-            carouselSlide.style.transition = 'none';
-            counter = 0;
-            carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-            updateIndicators(); // Update the indicators after resetting counter
-        }, 500); // Wait for the transition to finish before resetting
-    } else {
-        updateIndicators();
-    }
+function autoSlide() {
+    setInterval(() => {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }, 7000); // Change slide every 7 seconds
 }
 
-carouselSlide.addEventListener('transitionend', () => {
-    if (images[counter].id === 'last-clone') {
-        carouselSlide.style.transition = 'none';
-        counter = numImages - 2;
-        carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-    }
-});
-
-setInterval(slide, 3000); // Change slide every 3 seconds
-
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        counter = index; // Set the counter to the clicked indicator's index
-        carouselSlide.style.transition = 'transform 0.5s ease-in-out';
-        carouselSlide.style.transform = `translateX(${-slideWidth * counter}px)`;
-        updateIndicators();
-    });
-});
+showSlide(slideIndex);
+autoSlide();
