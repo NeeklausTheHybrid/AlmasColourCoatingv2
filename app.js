@@ -18,26 +18,26 @@ app.listen(PORT, () => {
 });
 
 // Function to connect to the MongoDB database
-const mongooseConnectDB = async () => {
-    try {
-        await mongoose.connect(
-            process.env.DB_CONNECTION || "mongodb://127.0.0.1:27017/almasWebsite",
-            {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            }
-        );
-        console.log('DB connected');
-    } catch (error) {
-        console.error('Error connecting to the database:', error.message);
-        process.exit(1); // Exit the application with a non-zero status code to indicate an error
-    }
-};
+// const mongooseConnectDB = async () => {
+//     try {
+//         await mongoose.connect(
+//             process.env.DB_CONNECTION || "mongodb://127.0.0.1:27017/almasWebsite",
+//             {
+//                 useNewUrlParser: true,
+//                 useUnifiedTopology: true,
+//             }
+//         );
+//         console.log('DB connected');
+//     } catch (error) {
+//         console.error('Error connecting to the database:', error.message);
+//         process.exit(1); // Exit the application with a non-zero status code to indicate an error
+//     }
+// };
 
 
 
-// Connect to MongoDB or calling function
-mongooseConnectDB();
+// // Connect to MongoDB or calling function
+// mongooseConnectDB();
 
 // Define a route for the homepage
 app.get('/', (req, res) => {
