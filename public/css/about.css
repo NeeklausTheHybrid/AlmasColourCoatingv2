@@ -22,25 +22,27 @@ body {
 
 .about-content {
     flex: 1;
-    padding: 20px;
+    padding: 25px;
     background-color: #fff;
 }
 
 .about-content h1 {
     font-size: 24px;
     color: #333;
+    margin-bottom: 1rem;
 }
 
 .about-content p {
     font-size: 16px;
     color: #555;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 
 
 .about-image {
     flex: 1;
-    background: url('../resources/owner.jpg') no-repeat center;
+    background: url('../resources/owner.png') no-repeat center;
     background-size: cover;
 }

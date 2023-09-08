@@ -1,111 +1,64 @@
 <%- include('./partials/header') %>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="resources/logo.png" alt="Company Logo">
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="resources/logo.png" alt="Company Logo">
+            </div>
+            <button class="mobile-toggle" id="mobile-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="/services">Our Services</a></li>
+                <li><a href="/projects">Our Projects</a></li>
+                <li><a href="/about">About Us</a></li>
+            </ul>
+            <ul class="connect-list">
+                <li><a href="/contact"><i class="fa-solid fa-headset fa-xl" style="color: #787878;"></i> &nbsp;Connect
+                        with
+                        us </a></li>
+            </ul>
+        </nav>
+
+        <div class="services-container">
+            <h2>Here are the service that we provide:</h2>
+            <div class="services-block">
+                <img src="resources/img1.jpg" alt="">
+                <div class="service">
+                    <h2>Sand Blasting Services</h2>
+                    <p style='text-align: justify;'>Our sandblasting services are designed to remove rust, paint, and
+                        other contaminants from a variety of surfaces,
+                        including metal, concrete, and wood. We use a range of blasting media, including sand, glass
+                        beads, and aluminium
+                        oxide, to achieve the desired level of surface preparation for each project</p>
+                    
+
+                          <b> Wanna know more? </b>
+                           <a href="/contact">Contact us now!</a>
+
+
+                </div>
+            </div>
+            <div class="services-block">
+                <img src="resources/img3.jpg" alt="">
+                <div class="service">
+                    <h2>Painting Services</h2>
+                    <p style='text-align: justify;'>Our painting services include both interior and exterior painting
+                        for commercial and industrial clients. We use
+                        highquality paints and coatings that are designed to withstand harsh environments and provide
+                        long-lasting protection
+                        for your assets. Our team is experienced in working with a variety of surfaces, including metal,
+                        concrete, and wood,
+                        and we can provide customized solutions to meet your specific needs.</p>
+                        <b> Wanna know more? </b>
+                        <a href="/contact">Contact us now!</a>
+
+                </div>
+            </div>
         </div>
-        <button class="mobile-toggle" id="mobile-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </button>
-        <ul class="nav-list" id="nav-list">
-            <li><a href="/">Home</a></li>
-            <li class="active"><a href="/services">Our Services</a></li>
-            <li><a href="/projects">Our Projects</a></li>
-            <li><a href="/about">About Us</a></li>
-        </ul>
-        <ul class="connect-list">
-            <li><a href="/contact"><i class="fa-solid fa-headset fa-xl" style="color: #787878;"></i> &nbsp;Connect with
-                    us </a></li>
-        </ul>
-    </nav>
 
-
-    <div class="customers">
-        <h2>Happy Customers</h2>
-        <div class="block-container">
-            <div class="blocks">
-                <img src="resources/anya.png" alt="">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque distinctio eius tempora,
-                    obcaecati, cumque atque eveniet quidem et optio nesciunt beatae exercitationem quia temporibus cum
-                    dignissimos officiis iste porro neque.</p>
-            </div>
-            <div class="blocks">
-                <img src="resources/anya.png" alt="">
-                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque in optio pariatur quasi dolore ea
-                    quisquam aspernatur libero dolorem rerum, quam ad enim minima sit cum et maxime fuga rem!</p>
-            </div>
-            <div class="blocks">
-                <img src="resources/anya.png" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi explicabo veniam animi itaque!
-                    Distinctio, officia blanditiis molestiae nostrum natus similique quisquam vero molestias,
-                    accusantium quia sed beatae, nemo rerum possimus?</p>
-            </div>
-
-
-        </div>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            <br>
-            <br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-            quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi possimus
-            eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt, sapiente
-            necessitatibus rem.
-        </p>
-    </div>
-<%- include('./partials/footer') %>
+        <%- include('./partials/footer') %>

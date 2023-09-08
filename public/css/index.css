@@ -15,7 +15,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fcf9f9;
+    background-color: #f4f2f2;
     color: black;
     padding: 8px 50px;
     position: sticky;
@@ -192,17 +192,28 @@ a {
 .block-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 1.5rem;
 }
 
 .blocks {
     border: 1px solid grey;
-    margin: .5rem
+    border-radius: 1rem;
+    margin: .5rem;
+    width:25%;
+    height:350px;
+    padding: 1rem;
+    padding-bottom:1rem;
+    background-color: whitesmoke;
 }
 
 .blocks img {
-    height: 250px;
-    width: 100%;
+    height: 200px;
+    width: 200px;
+}
+.text-content{
+    padding:1rem;
+    text-align: justify;
 }
 
 /* jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
