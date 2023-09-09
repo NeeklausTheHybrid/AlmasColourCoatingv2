@@ -13,12 +13,8 @@ body {
 
 }
 
-/* Style the project container */
 .project-container {
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
     padding: 2.5rem;
-    /* padding-bottom: 0; */
 }
 
 .project-container h2 {
@@ -35,16 +31,17 @@ body {
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
+
 .project img {
-    max-width: 40%;
-    height: 300px
+    width: 30%;
+    height: 250px
 }
 
 .project-info {
-    width: 40%
+    width: 60%;
+        margin: 0 auto;
 }
 
 .other-projects {
@@ -62,6 +59,10 @@ background-color: rgb(255, 255, 255);
 .project-list li {
     margin-bottom: 15px;
 }
+.project-list li:last-child{
+    margin-bottom: 0;
+}
+
 
 .project-list a {
     text-decoration: none;

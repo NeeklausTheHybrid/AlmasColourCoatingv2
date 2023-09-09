@@ -17,12 +17,12 @@ body {
 .about-section {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 25px;
 }
 
 .about-content {
     flex: 1;
-    padding: 25px;
+    padding: 30px;
     background-color: #fff;
 }
 
@@ -37,6 +37,11 @@ body {
     color: #555;
     margin-bottom: 15px;
     text-align: justify;
+}
+
+.about-content p:last-child{
+
+    margin-bottom: 0;
 }
 
 

@@ -1,16 +1,28 @@
-body{
+body,
+h1,
+h2,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     background-color: rgb(242, 240, 240);
 
 }
 
 
-.services-container{
-    padding: 1.5rem;
-    padding-bottom: 0;
+.services-container {
+    padding: 2.5rem;
 
 }
 
-.services-block{
+.services-container h2 {
+    margin-bottom: 1rem;
+}
+
+.services-block {
     background-color: white;
     border: 1.5px solid rgb(220, 219, 219);
     border-radius: 1rem;
@@ -18,20 +30,24 @@ body{
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
 }
 
-.services-block img{
+.services-block:last-child {
+    margin-bottom: 0;
+}
+
+.services-block img {
 
     height: 250px;
-    width:30%;
+    width: 30%;
 }
 
-.service{
+.service {
     width: 60%;
     margin: 0 auto;
 }
-.service a{
+
+.service a {
     color: rgb(48, 89, 192);
     padding: 0;
     margin: 0;
