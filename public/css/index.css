@@ -22,6 +22,7 @@ a {
     top: 0;
     z-index: 69;
     border-bottom: 1px solid rgba(175, 175, 175, 0.685);
+    margin: 0;
 }
 
 .logo img {

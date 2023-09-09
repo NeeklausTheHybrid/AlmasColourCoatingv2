@@ -1,240 +1,228 @@
 <%- include('./partials/header') %>
 
-<%- include('./partials/navbar', { activePage: activePage }) %>
-    <!-- <div class="carousel-container" style="height: 500px;"> 
-        <button id="prevBtn" class="carousel-btn prev-btn">&lt;</button>
-        <div class="carousel-slider">
-            <% images.forEach((image, index)=> { %>
-                <div class="carousel-slide <%= index === 0 ? 'active' : '' %>">
-                    <img src="<%= image %>" alt="images" style="width:100%; height: 100%" >
-                </div>
-                <% }); %>
+    <%- include('./partials/navbar', { activePage: activePage }) %>
+
+
+        <div class="carousel-container" style="height: 450px;">
+            <button id="prevBtn" class="carousel-btn prev-btn">&lt;</button>
+            <div class="carousel-slider">
+                <% images.forEach((image, index)=> { %>
+                    <div class="carousel-slide <%= index === 0 ? 'active' : '' %>">
+                        <img src="<%= image %>" alt="Image <%= index + 1 %>">
+                    </div>
+                    <% }); %>
+            </div>
+            <button id="nextBtn" class="carousel-btn next-btn">&gt;</button>
         </div>
-        <button id="nextBtn" class="carousel-btn next-btn">&gt;</button>
-    </div>
-    <div class="carousel-dots"></div> -->
+        <div class="carousel-dots"></div>
 
-    <div class="carousel-container" style="height: 450px;"> <!-- Set the height here -->
-        <button id="prevBtn" class="carousel-btn prev-btn">&lt;</button>
-        <div class="carousel-slider">
-            <% images.forEach((image, index)=> { %>
-                <div class="carousel-slide <%= index === 0 ? 'active' : '' %>">
-                    <img src="<%= image %>" alt="Image <%= index + 1 %>">
+        <div class="content">
+            <h2> Our Clients and their experience</h2>
+            <div class="block-container">
+                <div class="blocks">
+                    <img src="resources/rg.png" alt="">
+                    <p>Almas Colour Coating did a comendable job. excellento ! I am so impressed...
+                        <br>
+                        <br>
+                        Next Time I am gonna vote for Almas Colour Coating.
+                    </p>
                 </div>
-                <% }); %>
-        </div>
-        <button id="nextBtn" class="carousel-btn next-btn">&gt;</button>
-    </div>
-    <div class="carousel-dots"></div>
-    <!-- ... -->
+                <div class="blocks">
+                    <img src="resources/tate.png" alt="">
+                    <p>
+                        You won't believe what this color company did to my Bugatti. Now when people ask, 'What color is
+                        your Bugatti?' I just
+                        say, 'What color isn't it?'" <br>
+                        <br>
+                        Thanks for the paint-job on my chiron
+                    </p>
+                </div>
+                <div class="blocks">
+                    <img src="resources/patrick.png" alt="">
+                    <p>My whole world was red by blood, thanks to this company I changed it.</p>
+                </div>
 
-    <!-- section 2 -->
 
-<div class="content">
-    <h2> Our Clients and their experience</h2>
-    <div class="block-container">
-            <div class="blocks">
-                <img src="resources/rg.png" alt="">
-                <p>Almas Colour Coating did a comendable job. excellento ! I am so impressed... 
+            </div>
+            <div class="text-content">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
                     <br>
                     <br>
-                    Next Time I am gonna vote for Almas Colour Coating.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
+                    possimus
+                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
+                    sapiente
+                    necessitatibus rem.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
+                    quibusdam ducimus c
                 </p>
             </div>
-            <div class="blocks">
-                <img src="resources/tate.png" alt="">
-                <p>
-                You won't believe what this color company did to my Bugatti. Now when people ask, 'What color is your Bugatti?' I just
-                say, 'What color isn't it?'" <br>
-            <br>
-        Thanks for the paint-job on my chiron</p>
-            </div>
-            <div class="blocks">
-                <img src="resources/patrick.png" alt="">
-                <p>My whole world was red by blood, thanks to this company I changed it.</p>
-            </div>
-
-
         </div>
-        <div class="text-content">
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                <br>
-                <br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                possimus
-                eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                sapiente
-                necessitatibus rem.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                quibusdam ducimus c
-            </p>
-        </div>
-</div>
-    <footer>
-        <div class="footerPart1">
-            <div class="column-logo">
-                <img src="resources/footerlogo1.png" class="logoimg" alt="logo of site">
-            </div>
-
-            <div class="column-social">
-                <h4>Our Social</h4>
-                <ul class="footer-links">
-                    <li><a href="https://www.instagram.com/aman_pri777/?hl=en"><i
-                                class="fa-brands fa-instagram fa-lg"></i>
-                            Instagram</a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter fa-lg"></i> Twitter</a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> Linkedin</a></li>
-                </ul>
-            </div>
-            <div class="column-about">
-                <h4>Info</h4>
-                <ul class="footer-links">
-                    <li><a href="/about">About us</a></li>
-                    <li><a href="/contact"> Contact Us</a></li>
-                    <li><a href="/">Privacy Policy</a></li>
-                    <li><a href="/">Terms & Condition</a></li>
-                </ul>
-            </div>
-
-            <div class="column-info">
-
-                <!-- <img src="/resources/footerlogo.png" alt="" class="footer-img"> -->
-
-                <div class="contento">
-                    <p>
-                        Specialist in Mechanical, Blast Cleaning, Metalizing & Painting Works
-                    </p>
-
+        <footer>
+            <div class="footerPart1">
+                <div class="column-logo">
+                    <img src="resources/logo.png" class="logoimg" alt="logo of site">
                 </div>
 
+                <div class="column-social">
+                    <h4>Our Social</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com/aman_pri777/?hl=en"><i
+                                    class="fa-brands fa-instagram fa-lg"></i>
+                                Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook fa-lg"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter fa-lg"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin fa-lg"></i> Linkedin</a></li>
+                    </ul>
+                </div>
+                <div class="column-about">
+                    <h4>Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="/about">About us</a></li>
+                        <li><a href="/contact"> Contact Us</a></li>
+                        <li><a href="/">Privacy Policy</a></li>
+                        <li><a href="/">Terms & Condition</a></li>
+                    </ul>
+                </div>
+
+                <div class="column-info">
+
+                    <!-- <img src="/resources/footerlogo.png" alt="" class="footer-img"> -->
+
+                    <div class="contento">
+                        <p>
+                            Specialist in Mechanical, Blast Cleaning, Metalizing & Painting Works
+                        </p>
+
+                    </div>
+
+                </div>
             </div>
-        </div>
-        <div class="footerPart2">
-            <div class="copyright">
-                <p>&copy; Almas Colour Coating 2023. All rights reserved.</p>
+            <div class="footerPart2">
+                <div class="copyright">
+                    <p>&copy; Almas Colour Coating 2023. All rights reserved.</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navList = document.getElementById('nav-list');
-        const connectList = document.querySelector('.connect-list');
+        <script>
+            const mobileToggle = document.getElementById('mobile-toggle');
+            const navList = document.getElementById('nav-list');
+            const connectList = document.querySelector('.connect-list');
 
-        mobileToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
-            connectList.classList.toggle('active'); // Toggle connect list visibility
-        });
-
-
-    </script>
-    <script>// script.js
-
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const slider = document.querySelector('.carousel-slider');
-        const slides = document.querySelectorAll('.carousel-slide');
-        const dotsContainer = document.querySelector('.carousel-dots');
-
-        let slideIndex = 0;
-
-        function showSlide(index) {
-            slider.style.transform = `translateX(-${index * 100}%)`;
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
+            mobileToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+                connectList.classList.toggle('active'); // Toggle connect list visibility
             });
-            updateDots(index);
-        }
 
-        function updateDots(index) {
-            dotsContainer.innerHTML = '';
-            slides.forEach((_, i) => {
-                const dot = document.createElement('span');
-                dot.classList.add('carousel-dot');
-                dot.classList.toggle('active-dot', i === index);
-                dot.addEventListener('click', () => showSlide(i));
-                dotsContainer.appendChild(dot);
+
+        </script>
+        <script>// script.js
+
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slider = document.querySelector('.carousel-slider');
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dotsContainer = document.querySelector('.carousel-dots');
+
+            let slideIndex = 0;
+
+            function showSlide(index) {
+                slider.style.transform = `translateX(-${index * 100}%)`;
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+                updateDots(index);
+            }
+
+            function updateDots(index) {
+                dotsContainer.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.classList.add('carousel-dot');
+                    dot.classList.toggle('active-dot', i === index);
+                    dot.addEventListener('click', () => showSlide(i));
+                    dotsContainer.appendChild(dot);
+                });
+            }
+
+            prevBtn.addEventListener('click', () => {
+                slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                showSlide(slideIndex);
             });
-        }
 
-        prevBtn.addEventListener('click', () => {
-            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-            showSlide(slideIndex);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            slideIndex = (slideIndex + 1) % slides.length;
-            showSlide(slideIndex);
-        });
-
-        function autoSlide() {
-            setInterval(() => {
+            nextBtn.addEventListener('click', () => {
                 slideIndex = (slideIndex + 1) % slides.length;
                 showSlide(slideIndex);
-            }, 7000); // Change slide every 7 seconds
-        }
+            });
 
-        showSlide(slideIndex);
-        autoSlide();
-    </script>
-    </body>
+            function autoSlide() {
+                setInterval(() => {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    showSlide(slideIndex);
+                }, 7000); // Change slide every 7 seconds
+            }
 
-    </html>
+            showSlide(slideIndex);
+            autoSlide();
+        </script>
+        </body>
+
+        </html>

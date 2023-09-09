@@ -18,6 +18,7 @@ app.listen(PORT, () => {
 });
 
 // Function to connect to the MongoDB database
+
 // const mongooseConnectDB = async () => {
 //     try {
 //         await mongoose.connect(
@@ -37,11 +38,12 @@ app.listen(PORT, () => {
 
 
 // // Connect to MongoDB or calling function
+
 // mongooseConnectDB();
 
 // Define a route for the homepage
 app.get('/', (req, res) => {
-    const images = ['resources/img2.jpg', 'resources/img3.jpg', 'resources/img4.jpg'];
+    const images = ['/resources/work6.jpg', 'resources/work1.png', 'resources/work5.jpg'];
     res.render('index', { images, cssName: "index" ,  activePage: "Home"});
 });
 app.get("/downloadList", (req, res)=>{
