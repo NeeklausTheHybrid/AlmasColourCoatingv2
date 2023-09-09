@@ -15,12 +15,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f4f2f2;
-    color: black;
+    background-color:#292828;
+    color: rgb(255, 255, 255);
     padding: 8px 50px;
     position: sticky;
     top: 0;
-    /* Stick to the top of the viewport */
     z-index: 69;
     border-bottom: 1px solid rgba(175, 175, 175, 0.685);
 }
@@ -28,6 +27,8 @@ a {
 .logo img {
     max-height: 75px;
     width: 75px;
+    padding: 0;
+    margin: 0;
 }
 
 .nav-list,
@@ -41,7 +42,7 @@ a {
 }
 
 .nav-list li:hover a {
-    color: rgb(44, 133, 172);
+    color: rgb(180, 223, 242);
     transition: ease-in .2s;
 
 }
@@ -49,7 +50,7 @@ a {
 .nav-list a,
 .connect-list a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 17px;
 
 }
@@ -65,7 +66,7 @@ a {
 }
 
 .connect-list li:hover a {
-    color: rgb(44, 133, 172);
+    color:#00eeff;
     /* transform: scale(1.05); */
     transition: ease-in .2s;
 
@@ -73,11 +74,12 @@ a {
 
 .active {
 
-    transform: scale(1.07);
+    transform: scale(1.1);
 }
 
 .active a {
-    color: rgb(44, 133, 172);
+    color: #00eeff;
+    /* text-decoration: underline; */
 
 
 }

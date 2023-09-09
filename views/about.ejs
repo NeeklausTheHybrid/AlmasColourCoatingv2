@@ -1,27 +1,6 @@
-<%- include('./partials/header') %>
+<%- include('./partials/header', {cssName:cssName}) %>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            <img src="resources/logo.png" alt="Company Logo">
-        </div>
-        <button class="mobile-toggle" id="mobile-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </button>
-        <ul class="nav-list" id="nav-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/services">Our Services</a></li>
-            <li ><a href="/projects">Our Projects</a></li>
-            <li class="active"><a href="/about">About Us</a></li>
-        </ul>
-        <ul class="connect-list">
-            <li><a href="/contact"><i class="fa-solid fa-headset fa-xl" style="color: #787878;"></i> &nbsp;Connect with
-                    us </a></li>
-        </ul>
-    </nav>
+    <%- include('./partials/navbar', { activePage: activePage }) %>
 
 <section class="about-section">
     <div class="about-content">

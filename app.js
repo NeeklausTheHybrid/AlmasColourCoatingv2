@@ -42,7 +42,7 @@ app.listen(PORT, () => {
 // Define a route for the homepage
 app.get('/', (req, res) => {
     const images = ['resources/img2.jpg', 'resources/img3.jpg', 'resources/img4.jpg'];
-    res.render('index', { images, cssName: "index" });
+    res.render('index', { images, cssName: "index" ,  activePage: "Home"});
 });
 app.get("/downloadList", (req, res)=>{
     res.download("public/resources/List_of_projects.pdf");
@@ -50,6 +50,7 @@ app.get("/downloadList", (req, res)=>{
 // Define a dynamic route based on the name parameter
 app.get("/:name", (req, res) => {
     const templateName = req.params.name;
-    res.render(templateName, { cssName: templateName });
+    res.render(templateName, { cssName:templateName, activePage: templateName });
 });
+
 
