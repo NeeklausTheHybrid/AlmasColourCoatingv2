@@ -19,40 +19,62 @@ app.listen(PORT, () => {
 
 // Function to connect to the MongoDB database
 
-// const mongooseConnectDB = async () => {
-//     try {
-//         await mongoose.connect(
-//             process.env.DB_CONNECTION || "mongodb://127.0.0.1:27017/almasWebsite",
-//             {
-//                 useNewUrlParser: true,
-//                 useUnifiedTopology: true,
-//             }
-//         );
-//         console.log('DB connected');
-//     } catch (error) {
-//         console.error('Error connecting to the database:', error.message);
-//         process.exit(1); // Exit the application with a non-zero status code to indicate an error
-//     }
-// };
+const mongooseConnectDB = async () => {
+    try {
+        await mongoose.connect(
+            process.env.DB_CONNECTION || "mongodb+srv://amirkhan011000:38AP1HGD6nB36BCc@cluster1.vgymzih.mongodb.net/AlmasColourCoating?retryWrites=true&w=majority",
+            {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+            }
+        );
+        console.log('DB connected');
+    } catch (error) {
+        console.error('Error connecting to the database:', error.message);
+        process.exit(1); // Exit the application with a non-zero status code to indicate an error
+    }
+};
 
 
 
-// // Connect to MongoDB or calling function
+// Connect to MongoDB or calling function
 
-// mongooseConnectDB();
+mongooseConnectDB();
+const customerReviews = require('./models/reviewModel');
 
 // Define a route for the homepage
 app.get('/', (req, res) => {
-    const images = ['/resources/work6.jpg', 'resources/work1.png', 'resources/work5.jpg'];
-    res.render('index', { images, cssName: "index" ,  activePage: "Home"});
+    const images = ['resources/sliderImg1.jpg', 'resources/sliderImg2.jpg', 'resources/sliderImg3.png', 'resources/sliderImg4.png'];
+    res.render('index', { images, cssName: "index", activePage: "Home" });
 });
-app.get("/downloadList", (req, res)=>{
+app.get("/downloadList", (req, res) => {
     res.download("public/resources/List_of_projects.pdf");
 })
 // Define a dynamic route based on the name parameter
 app.get("/:name", (req, res) => {
     const templateName = req.params.name;
-    res.render(templateName, { cssName:templateName, activePage: templateName });
+    res.render(templateName, { cssName: templateName, activePage: templateName });
 });
 
+app.post('/', async (req, res) => {
+    try {
+        // Validate input data (you may want to add more validation)
+        if (!req.body.name || !req.body.ratings || !req.body.review) {
+            return res.status(400).send('Name, ratings, and review are required fields.');
+        }
+
+        const newReview = new customerReviews ({
+            name: req.body.name,
+            phoneNumber: req.body.phoneNumber,
+            ratings: req.body.ratings,
+            review: req.body.review
+        });
+
+        await newReview.save();
+        res.redirect('/');
+    } catch (error) {
+        console.error('Error saving review:', error);
+        res.status(500).send('Error saving review.');
+    }
+});
 

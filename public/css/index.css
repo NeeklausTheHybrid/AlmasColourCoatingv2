@@ -15,16 +15,16 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:#292828;
-    color: rgb(255, 255, 255);
+    background-color: #292828;
     padding: 8px 50px;
     position: sticky;
     top: 0;
     z-index: 69;
     border-bottom: 1px solid rgba(175, 175, 175, 0.685);
     margin: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Add this line for the shadow */
 }
-
 .logo img {
     max-height: 75px;
     width: 75px;
@@ -104,6 +104,81 @@ a {
     height: 100%;
     background-color: white;
     margin: 3px 0;
+}
+/* Container styling */
+.review-form-container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styling */
+.review-form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+.review-form {
+    text-align: left;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input styling */
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Rating container styling */
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Rating star styling (customize this as needed) */
+.rating .star {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Review textarea styling */
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 

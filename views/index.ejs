@@ -17,6 +17,7 @@
         <div class="carousel-dots"></div>
 
         <div class="content">
+
             <h2> Our Clients and their experience</h2>
             <div class="block-container">
                 <div class="blocks">
@@ -44,28 +45,43 @@
 
 
             </div>
+
+        <!-- <div class="testimonials"> -->
+            <div class="review-form-container">
+                    <h1>Impressed by work? Drop your feedback here.</h1>
+                
+                    <form action="/" method="POST" class="review-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="rating">Rate us 1 to 5 Star</label>
+                            <div class="rating">
+                                <input type="range" min="1" max="5" name="ratings">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="review">Review</label>
+                            <textarea id="review" name="review" cols="68" rows="7"></textarea>
+                        </div>
+                
+                
+
+                
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            <!-- </div> -->
+
             <div class="text-content">
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                    possimus
-                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                    sapiente
-                    necessitatibus rem.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                    possimus
-                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                    sapiente
-                    necessitatibus rem.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
-                    possimus
-                    eveniet dicta hic? Voluptas expedita voluptatibus dignissimos quisquam eligendi ut sed incidunt,
-                    sapiente
-                    necessitatibus rem.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
-                    quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
                     quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
                     possimus
@@ -115,6 +131,7 @@
                 </p>
             </div>
         </div>
+
         <footer>
             <div class="footerPart1">
                 <div class="column-logo">
@@ -174,7 +191,7 @@
 
 
         </script>
-        <script>// script.js
+        <script>
 
             const prevBtn = document.getElementById('prevBtn');
             const nextBtn = document.getElementById('nextBtn');
@@ -223,6 +240,9 @@
             showSlide(slideIndex);
             autoSlide();
         </script>
+
         </body>
+
+
 
         </html>
