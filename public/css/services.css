@@ -1,6 +1,10 @@
 body,
 h1,
 h2,
+h4,
+h3,
+h5,
+h6,
 p,
 ul {
     margin: 0;
@@ -15,11 +19,15 @@ body {
 
 .services-container {
     padding: 2.5rem;
+    padding-top: 1rem;
 
 }
 
-.services-container h2 {
-    margin-bottom: 1rem;
+.heading {
+    margin-bottom: 2rem;
+    padding-left: .3rem;
+    /* text-align: center; */
+    /* text-transform: uppercase; */
 }
 
 .services-block {
@@ -45,6 +53,14 @@ body {
 .service {
     width: 60%;
     margin: 0 auto;
+}
+
+.service h2 {
+    margin-bottom: 1rem;
+}
+
+.know-more {
+    margin-top: 1rem;
 }
 
 .service a {

@@ -1,7 +1,8 @@
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const dotenv=require("dotenv");
+const dotenv = require("dotenv");
+
 dotenv.config();
 
 const app = express();
@@ -39,20 +40,43 @@ const mongooseConnectDB = async () => {
 
 
 
-// Connect to MongoDB or calling function
-
 mongooseConnectDB();
 const customerReviews = require('./models/reviewModel');
 const generalInfo = require("./models/generalInfoModel");
 const projects = require("./models/projectModel");
-// Define a route for the homepage
-app.get('/', (req, res) => {
+
+const ratingTocomment={
+    1:"Pathetic",
+    2:"Not Good",
+    3:"Decent",
+    4:"Good",
+    5:"Awesome"
+}
+
+app.get('/', async (req, res) => {
     const images = ['resources/sliderImg1.jpg', 'resources/sliderImg2.jpg', 'resources/sliderImg3.png', 'resources/sliderImg4.png'];
-    res.render('index', { images, cssName: "index", activePage: "Home" });
+    try {
+        const reviews = await customerReviews.find({});
+
+        res.render('index', {
+            images,
+            cssName: "index",
+            activePage: "Home",
+            reviews,
+            ratingTocomment
+        });
+    } catch (error) {
+        console.error("Failed", error);
+    }
 });
+
+
+
 app.get("/downloadList", (req, res) => {
     res.download("public/resources/List_of_projects.pdf");
-})
+});
+
+
 // Define a dynamic route based on the name parameter
 app.get("/:name", async (req, res) => {
     const templateName = req.params.name;
@@ -60,23 +84,23 @@ app.get("/:name", async (req, res) => {
     try {
         // Assuming you want to find a specific document in the "general-info" collection
         const info = await generalInfo.findOne();
-        const project=await projects.findOne();
+        const project = await projects.findOne();
 
         res.render(templateName, {
             cssName: templateName,
             activePage: templateName,
             contactNumber: info.contact.number,
             contactAddress: info.contact.address,
-            contactAddressLink:info.contact.addresslink,
-            contactEmail:info.contact.email,
-            aboutSection:info.aboutSection,
+            contactAddressLink: info.contact.addresslink,
+            contactEmail: info.contact.email,
+            aboutSection: info.aboutSection,
             sandBlasting: info.services.sandblasting,
             painting: info.services.painting,
             metalizing: info.services.metalizing,
         });
     }
 
-     catch (error) {
+    catch (error) {
         console.error("Error querying general info:", error);
         res.status(500).send("Error querying general info");
     }
@@ -86,19 +110,13 @@ app.get("/:name", async (req, res) => {
 
 app.post('/', async (req, res) => {
     try {
-        // Validate input data (you may want to add more validation)
-        if (!req.body.name || !req.body.ratings || !req.body.review) {
-            return res.status(400).send('Name, ratings, and review are required fields.');
-        }
 
-        const newReview = new customerReviews ({
+        const newReview = await customerReviews.create({
             name: req.body.name,
             phoneNumber: req.body.phoneNumber,
-            ratings: req.body.ratings,
+            ratings: req.body.rating,
             review: req.body.review
         });
-
-        await newReview.save();
         res.redirect('/');
     } catch (error) {
         console.error('Error saving review:', error);

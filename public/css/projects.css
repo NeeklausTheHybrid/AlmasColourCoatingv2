@@ -15,11 +15,14 @@ body {
 
 .project-container {
     padding: 2.5rem;
+    padding-top: 1rem;
 }
 
-.project-container h2 {
-    margin-bottom: 1rem;
-    padding-left: .2rem;
+.heading{
+    margin-bottom: 2rem;
+    padding-left: .3rem;
+    /* text-align: center; */
+    /* text-transform: uppercase; */
 }
 
 /* Style the top 5 projects */

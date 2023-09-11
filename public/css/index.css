@@ -4,6 +4,17 @@ body {
     padding: 0;
     font: 1em sans-serif;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -16,20 +27,24 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: #292828;
-    padding: 8px 50px;
+    padding: 8px 60px;
+    /* padding-right: 75px; */
     position: sticky;
     top: 0;
     z-index: 69;
     border-bottom: 1px solid rgba(175, 175, 175, 0.685);
     margin: 0;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
     /* Add this line for the shadow */
 }
+
 .logo img {
     max-height: 75px;
     width: 75px;
     padding: 0;
     margin: 0;
+    /* padding-left: 20px; */
 }
 
 .nav-list,
@@ -39,12 +54,16 @@ a {
 }
 
 .nav-list li {
-    margin-right: 20px;
+    margin-right: 30px;
+}
+
+.nav-list {
+    padding-left: 110px;
 }
 
 .nav-list li:hover a {
     color: rgb(180, 223, 242);
-    transition: ease-in .2s;
+    transition: ease-in-out .3s;
 
 }
 
@@ -52,8 +71,8 @@ a {
 .connect-list a {
     text-decoration: none;
     color: white;
-    font-size: 17px;
-
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .connect-list {
@@ -67,16 +86,16 @@ a {
 }
 
 .connect-list li:hover a {
-    color:#00eeff;
+    color: #00eeff;
     /* transform: scale(1.05); */
     transition: ease-in .2s;
 
 }
 
-.active {
+/* .active {
 
-    transform: scale(1.1);
-}
+     transform: scale(1.1);
+} */
 
 .active a {
     color: #00eeff;
@@ -105,63 +124,126 @@ a {
     background-color: white;
     margin: 3px 0;
 }
+
+
+/* **********************navbar ends***************************** */
+
+/* ************************** review form ontainer ***************************** */
+
 /* Container styling */
 .review-form-container {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    padding: 1.5rem;
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+}
+
+.review-form-container {
+    position: relative;
+    height: 500px;
+    /* Adjust this to your desired height */
+}
+
+.review-form-container::before {
+    content: "";
+    background: url('../resources/vid.gif') no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: your-animation 10s linear infinite;
+    /* Adjust animation properties */
+}
+
+@keyframes your-animation {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 /* Heading styling */
 .review-form-container h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    /* font-size: 24px; */
+    text-transform: uppercase;
+    /* margin-bottom: 20px; */
+    color: white;
+    text-shadow: 1px 1px #000000;
+    text-emphasis:initial;
 }
 
 /* Form styling */
 .review-form {
-    text-align: left;
+    background-color: rgba(255, 255, 255, 0.726);
+    padding: 20px;
+    width: 400px;
+    margin: 0;
+    border: 2px solid #000000;
 }
 
 /* Form group styling */
 .form-group {
+    padding: 0;
+    margin: 0;
     margin-bottom: 20px;
-}
+    display: flex;
 
-/* Label styling */
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+    align-items: center;
+
+
 }
 
 /* Input styling */
+
+.form-group label {
+    width: 45%;
+    /* color:white; */
+    
+}
+
 .form-group input[type="text"],
 .form-group input[type="tel"],
 .form-group textarea {
-    width: 100%;
+    width: 60%;
+    box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     font-size: 16px;
+  background-color:   rgba(255, 255, 255, 0)
 }
 
-/* Rating container styling */
-.rating {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
 
-/* Rating star styling (customize this as needed) */
-.rating .star {
-    font-size: 24px;
+.star {
+    font-size: 36px;
     cursor: pointer;
+    color: grey;
+    margin-left: 10px;
 }
 
-/* Review textarea styling */
-.form-group textarea {
+/* .star:first-of-type{
+    margin-left: 50px;
+
+} */
+
+.star.activate {
+    color: gold;
+}
+
+
+
+textarea {
     resize: vertical;
 }
 
@@ -173,6 +255,7 @@ button[type="submit"] {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 18px;
+    width: 100%;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -183,14 +266,10 @@ button[type="submit"]:hover {
 
 
 
-.content {
-    text-align: center;
-    padding: 20px;
+/* ******************************image carousel************************************************************* */
+.carousel-main {
+    border: 1px solid rgb(255, 0, 0);
 }
-
-/* styles.css */
-
-/* styles.css */
 
 .carousel-container {
     width: 100%;
@@ -262,39 +341,97 @@ button[type="submit"]:hover {
 
 .active-dot {
     background-color: #fff;
-}.systum {
+}
+
+/* ********************carousel ends*************************** */
+
+/* ***************************show off************************* */
+.systum {
     width: 100%;
     height: 520px;
+}
+
+.review-main {
+    padding-top: 1.5rem;
+    background-color: #eeeaea92;
+
 }
 
 .block-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
+    justify-content: space-evenly;
+    padding: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .blocks {
-    border: 1px solid grey;
-    border-radius: 1rem;
-    margin: .5rem;
-    width:25%;
-    height:350px;
+    /* flex: 1; */
+    flex-basis: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid rgb(190, 190, 190);
+    box-shadow: 0px 2px 2px 1px #bab8b9c9;
+    height: 300px;
     padding: 1rem;
-    padding-bottom:1rem;
-    background-color: whitesmoke;
+    background-color: white;
+    text-align: left;
+    margin-right: 1rem;
 }
 
-.blocks img {
-    height: 200px;
-    width: 200px;
+.blocks h5 {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
 }
-.text-content{
-    padding:1rem;
+
+/* color:white; */
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #000000;
+}
+
+.blocks p {
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Add this to your CSS file */
+.show-star {
+    color: grey;
+    /* Default grey color for all stars */
+    font-size: 28px;
+    /* Adjust the font size as needed */
+    margin-right: 1px;
+    /* Adjust the spacing between stars as needed */
+}
+
+.gold-star {
+    color: gold;
+    /* Gold color for stars with a rating */
+}
+
+/* **********************shite *************************************** */
+.text-content {
+    padding: 1rem;
     text-align: justify;
 }
 
-/* jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
+/* ***********************footer************************************* */
 footer {
     background-color: #292828;
     color: white;
@@ -361,7 +498,8 @@ footer {
     align-items: center;
     width: 430px;
 }
-.contento{
+
+.contento {
     font-size: 15px;
 }
 
