@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const infoSchema = new mongoose.Schema({
     aboutSection: String,
     contact: {
-        number: Number,  
+        number: String,  
         email: String,   
         address: String,
-        addressLink: String 
+        addresslink: String 
     },
     services: {
-        sandBlasting: String,
+        sandblasting: String,
         painting: String,
         metalizing:String
     }

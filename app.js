@@ -1,7 +1,8 @@
 const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-
+const dotenv=require("dotenv");
+dotenv.config();
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.set('view engine', 'ejs');
 
 // Define the port to listen on
 const PORT = process.env.PORT || 3000;
+
 // Start the server 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);
@@ -22,7 +24,7 @@ app.listen(PORT, () => {
 const mongooseConnectDB = async () => {
     try {
         await mongoose.connect(
-            process.env.DB_CONNECTION || "mongodb+srv://amirkhan011000:38AP1HGD6nB36BCc@cluster1.vgymzih.mongodb.net/AlmasColourCoating?retryWrites=true&w=majority",
+            process.env.DB_CONNECTION,
             {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
@@ -41,7 +43,8 @@ const mongooseConnectDB = async () => {
 
 mongooseConnectDB();
 const customerReviews = require('./models/reviewModel');
-
+const generalInfo = require("./models/generalInfoModel");
+const projects = require("./models/projectModel");
 // Define a route for the homepage
 app.get('/', (req, res) => {
     const images = ['resources/sliderImg1.jpg', 'resources/sliderImg2.jpg', 'resources/sliderImg3.png', 'resources/sliderImg4.png'];
@@ -51,10 +54,35 @@ app.get("/downloadList", (req, res) => {
     res.download("public/resources/List_of_projects.pdf");
 })
 // Define a dynamic route based on the name parameter
-app.get("/:name", (req, res) => {
+app.get("/:name", async (req, res) => {
     const templateName = req.params.name;
-    res.render(templateName, { cssName: templateName, activePage: templateName });
+
+    try {
+        // Assuming you want to find a specific document in the "general-info" collection
+        const info = await generalInfo.findOne();
+        const project=await projects.findOne();
+
+        res.render(templateName, {
+            cssName: templateName,
+            activePage: templateName,
+            contactNumber: info.contact.number,
+            contactAddress: info.contact.address,
+            contactAddressLink:info.contact.addresslink,
+            contactEmail:info.contact.email,
+            aboutSection:info.aboutSection,
+            sandBlasting: info.services.sandblasting,
+            painting: info.services.painting,
+            metalizing: info.services.metalizing,
+        });
+    }
+
+     catch (error) {
+        console.error("Error querying general info:", error);
+        res.status(500).send("Error querying general info");
+    }
 });
+
+
 
 app.post('/', async (req, res) => {
     try {
