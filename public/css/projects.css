@@ -8,18 +8,21 @@ ul {
     padding: 0;
 }
 
-body {
-    background-color: rgb(242, 240, 240);
+body {background-color: rgba(243, 242, 242, 0.965);
 
 }
 
 .project-container {
-    padding: 2.5rem;
     padding-top: 1rem;
 }
 
 .heading{
-    margin-bottom: 2rem;
+    
+    padding: 2.5rem;
+}
+
+.heading h1{
+    /* margin-bottom: 2rem; */
     padding-left: .3rem;
     /* text-align: center; */
     /* text-transform: uppercase; */
@@ -27,24 +30,25 @@ body {
 
 /* Style the top 5 projects */
 .project {
-    background-color: rgb(255, 255, 255);
-    border: 1.5px solid rgb(220, 219, 219);
-    border-radius: 1rem;
     padding: 1.5rem;
+    margin:0 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
+    background-color: rgb(255, 255, 255);
 }
 
 
 .project img {
-    width: 30%;
-    height: 250px
+    width: 50%;
+    height: 500px
 }
 
 .project-info {
-    width: 60%;
+    /* border: 1.5px solid rgb(220, 219, 219); */
+    /* width: 80%; */
         margin: 0 auto;
+        padding: 1.5rem;
 }
 
 .other-projects {

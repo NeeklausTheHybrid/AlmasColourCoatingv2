@@ -16,40 +16,60 @@
             </div>
             <div class="carousel-dots"></div>
         </div>
+<div class="text-content">
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora sapiente? Delectus ut repellat dolorem labore incidunt voluptas quisquam tempora quos quaerat voluptatibus explicabo dignissimos asperiores, impedit non, eligendi officia sapiente nam rerum provident deleniti veniam aliquam accusamus. Officiis in inventore similique illo vel est sit iusto eius nulla accusamus!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora sapiente? Delectus ut repellat dolorem labore incidunt voluptas quisquam tempora quos quaerat voluptatibus explicabo dignissimos asperiores, impedit non, eligendi officia sapiente nam rerum provident deleniti veniam aliquam accusamus. Officiis in inventore similique illo vel est sit iusto eius nulla accusamus!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora sapiente? Delectus ut repellat dolorem labore incidunt voluptas quisquam tempora quos quaerat voluptatibus explicabo dignissimos asperiores, impedit non, eligendi officia sapiente nam rerum provident deleniti veniam aliquam accusamus. Officiis in inventore similique illo vel est sit iusto eius nulla accusamus!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora sapiente? Delectus ut repellat dolorem labore incidunt voluptas quisquam tempora quos quaerat voluptatibus explicabo dignissimos asperiores, impedit non, eligendi officia sapiente nam rerum provident deleniti veniam aliquam accusamus. Officiis in inventore similique illo vel est sit iusto eius nulla accusamus!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora sapiente? Delectus ut repellat dolorem labore incidunt voluptas quisquam tempora quos quaerat voluptatibus explicabo dignissimos asperiores, impedit non, eligendi officia sapiente nam rerum provident deleniti veniam aliquam accusamus. Officiis in inventore similique illo vel est sit iusto eius nulla accusamus!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, tempora sapiente? Delectus ut repellat dolorem labore incidunt voluptas quisquam tempora quos quaerat voluptatibus explicabo dignissimos asperiores, impedit non, eligendi officia sapiente nam rerum provident deleniti veniam aliquam accusamus. Officiis in inventore similique illo vel est sit iusto eius nulla accusamus!
 
+</p>    <img src="/resources/power.gif" alt="">
+
+</div>
         <div class="review-main">
             <h2 class="head">Our Clients and their experience</h2>
+
+            <button class="prev-button"><img src="/resources/arrow.png" alt=""></button>
+            <button class="next-button"><img src="/resources/arrow.png" alt=""></button>
+            
             <div class="block-container">
                 <% reviews.forEach(element=> { %>
                     <div class="blocks">
 
                         <div class="rating">
-                            <h3><%- ratingTocomment[element.ratings] %></h3>
                             <div>
                                 <% for (let i=0; i < 5; i++) { %>
-                                    <span class="show-star <%= i < element.ratings ? 'gold-star' : '' %>">&#9733;</span>
+                                    <span class="show-star <%= i < element.ratings ? 'gold-star' : '' %>"><i class="fa-solid fa-star"></i></span>
                                     <% } %>
                             </div>
+                            <h4>
+                                <strong>
+
+                                    <%= element.name %>
+                                </strong>
+                            </h4>
+                            <h5>
+                                <strong>
+
+                                    <%- ratingTocomment[element.ratings] %>
+                            </h5>
+
+                            </strong>
                         </div>
-                        <h5>
-                            <%= element.name %>
-                        </h5>
                         <p>
                             <%= element.review %>
                         </p>
                     </div>
                     <% }) %>
             </div>
+
         </div>
 
         <div class="review-form-container">
-            <!-- <div class="backgroundX"> -->
-                <!-- <video autoplay muted loop poster="resources/tate.png">
-                    <source src="resources/vid.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video> -->
 
-                <h1>Impressed by work ? Drop your feedback here.</h1>
+            <h1>Impressed by work ? Drop your feedback here.</h1>
 
             <!-- </div> -->
 
@@ -57,22 +77,22 @@
 
                 <div class="form-group">
                     <label for="name"><strong>Name</strong></label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name here">
                 </div>
 
                 <div class="form-group">
                     <label for="phoneNumber"><strong>Phone Number</strong></label>
-                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your number (optional)">
                 </div>
 
                 <div class="form-group">
                     <label for="rating"><strong>Rate us </strong></label>
 
-                    <span class="star" data-rating="1">&#9733;</span>
-                    <span class="star" data-rating="2">&#9733;</span>
-                    <span class="star" data-rating="3">&#9733;</span>
-                    <span class="star" data-rating="4">&#9733;</span>
-                    <span class="star" data-rating="5">&#9733;</span>
+                    <span class="star" data-rating="1"><i class="fa-solid fa-star"></i></span>
+                    <span class="star" data-rating="2"><i class="fa-solid fa-star"></i></span>
+                    <span class="star" data-rating="3"><i class="fa-solid fa-star"></i></span>
+                    <span class="star" data-rating="4"><i class="fa-solid fa-star"></i></span>
+                    <span class="star" data-rating="5"><i class="fa-solid fa-star"></i></span>
 
                     <!-- Hidden input field to store the selected rating -->
                     <input type="hidden" id="rating" name="rating" value="1">
@@ -80,7 +100,8 @@
 
                 <div class="form-group">
                     <label for="review"><strong> Review </strong></label>
-                    <textarea id="review" name="review" cols="68" rows="7"></textarea>
+                    <textarea id="review" name="review" cols="68" rows="7"
+                        placeholder="Tell us about your experience"></textarea>
                 </div>
 
                 <button type="submit">Submit</button>
@@ -89,6 +110,7 @@
 
 
         <div class="text-content">
+            <img src="/resources/giphy.gif" alt="">
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
                 quibusdam ducimus cum alias at atque porro, ipsa officia eius magni maiores praesentium eum modi
@@ -137,6 +159,7 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui delectus nam optio inventore sapiente
                 quibusdam ducimus c
             </p>
+            
         </div>
 
 
@@ -169,7 +192,23 @@
 
             </script>
 
+<script>const productContainers = [...document.querySelectorAll('.block-container')];
+    const nxtBtn = [...document.querySelectorAll('.next-button')];
+    const preBtn = [...document.querySelectorAll('.prev-button')];
 
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
+    })
+</script>
 
             <script>
                 const mobileToggle = document.getElementById('mobile-toggle');
