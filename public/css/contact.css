@@ -54,3 +54,11 @@ body {
     text-align: left;
     width:30%
 }
+.contact-info p{
+    transition: .3s ease-in;
+}
+.contact-info p:hover{
+    color: rgb(0, 102, 255);
+    cursor: pointer;
+    transform: scale(1.02);
+}
